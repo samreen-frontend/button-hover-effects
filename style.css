@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.border-box {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    box-shadow: 2px 2px 12px  rgba(0, 0, 0, 0.2);
+}
+
+.border-box::before, .border-box::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.border-box::before {
+    top: 0;
+    left: 0;
+    border-top-color: #00eeff;
+    border-left-color: #00eeff;
+}
+
+.border-box::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-color: #00eeff;
+    border-right-color: #00eeff;
+}
+
+.border-box:hover::before, .border-box:hover::after {
+    width: 100%;
+    height: 100%;
+    border-color: #6f9294;
+}
+
+
+
+
+
+
+
+/* new button css */
+
+
+.border
+{
+    margin: 30px 30px 30px 30px;
+    width: 150px;
+    height: 50px;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.border {
+    position: relative;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid transparent;
+    transition: color 0.4s ease;
+}
+
+.border::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #00eeff;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.6s ;
+}
+
+.border::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #00eeff;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition:  0.6s ;
+}
+
+.border:hover {
+    color: #00eeff;
+}
+
+.border:hover::before, 
+.border:hover::after {
+    width: 100%;
+}
+
+.border:hover::before {
+    top: 0;
+}
+
+.border:hover::after {
+    bottom: 0;
+}
